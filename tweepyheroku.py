@@ -16,7 +16,7 @@ authority = tweepy.OAuthHandler(app_key, app_secret)
 authority.set_access_token(access_token, access_token_key)
 
 # calling the api
-api = tweepy.API(authority)
+api = tweepy.API(authority, wait_on_rate_limit=True)
 
 #targeted user
 user = 'Calendly'
